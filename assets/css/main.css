@@ -44,7 +44,6 @@ body {
   width: 100%;
   height: auto;
   background: white;
-  overflow: scroll;
   transition: all 0.7s ease-out;
   -webkit-transition: all 0.7s ease-out;
   -moz-transition: all 0.7s ease-out;
