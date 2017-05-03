@@ -156,7 +156,10 @@ body {
 }
 .textual {
   font-family: 'Lato', sans-serif;
-  font-weight: 300;
+}
+.textual b {
+  font-family: 'Droid Serif', serif;
+  font-weight: bold;
 }
 #carouselhome {
   position: relative;
@@ -274,6 +277,32 @@ body {
 }
 #feed-insta {
   margin: auto;
+}
+#toggleMenu {
+  width: 100%;
+  padding: 0em 0em 0em 1em;
+  position: relative;
+  font-family: 'Droid Serif', serif;
+  font-weight: 400;
+}
+#toggleMenu ul li a {
+  color: #424242;
+}
+#toggleMenu::before, #toggleMenu::after {
+  content: '-----------------------';
+  font-family: 'Qincha', sans-serif;
+  font-weight: bold;
+  letter-spacing: 6px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  left: 0;
+}
+#toggleMenu::before{
+  top: -5px;
+}
+#toggleMenu::after {
+  bottom: -15px;
 }
 footer {
   padding-top: 3em;

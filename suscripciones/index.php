@@ -22,7 +22,7 @@
   <section id="logReport">
     <div class="container h-100">
       <div class="row justify-content-center h-100 align-items-center">
-        <div class="col-12 col-md-5 p-4">
+        <div class="col-12 col-md-7 col-lg-5 p-4">
           <div class="card text-center" id="card-log">
             <div class="card-header">
               <img class="img-fluid" src="../assets/media/ico.png" alt="">
