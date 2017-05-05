@@ -130,10 +130,10 @@ body {
   left: 0;
 }
 #main header nav .nav::before{
-  top: -12px;
+  top: 0px;
 }
 #main header nav .nav::after {
-  bottom: -15px;
+  bottom: -2px;
 }
 #main header nav .nav .nav-item {
   margin: auto 1em;
@@ -141,8 +141,10 @@ body {
 }
 #main header nav .nav .nav-item .nav-link {
   color: #424242;
-  font-family: 'Droid Serif', serif;
+  font-family: 'Qincha', serif;
   font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 1.3em;
 }
 #main header nav .nav .nav-item .nav-link:hover {
   color: #eb5c28;
@@ -160,6 +162,10 @@ body {
 .textual b {
   font-family: 'Droid Serif', serif;
   font-weight: bold;
+}
+.text-qincha {
+  font-family: 'Qincha', monospace;
+  font-size: 1.2em;
 }
 #carouselhome {
   position: relative;
@@ -287,6 +293,9 @@ body {
 }
 #toggleMenu ul li a {
   color: #424242;
+  font-family: 'Qincha', monospace;
+  font-size: 1.3em;
+  letter-spacing: 2px;
 }
 #toggleMenu::before, #toggleMenu::after {
   content: '-----------------------';

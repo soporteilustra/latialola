@@ -16,7 +16,7 @@ function crawl_page($url, $depth = 5)
     //GET ELEMENTS HTML
     //get script that contents all info profile showed on instagram
     $script = $dom->getElementsByTagName('script');
-    $content_profile = $script[4]->nodeValue;
+    $content_profile = $script[3]->nodeValue;
     //Extract string to convert a JSON decode document
     $stringArray = substr($content_profile, 21,-1);
     $parseContent = json_decode($stringArray);
