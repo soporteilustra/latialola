@@ -41,13 +41,13 @@ function interactFeed(o, $cap) {
       $(this).show().delay(1500).removeClass('col-4 feed-insta-item')
              .addClass('col-12 feed-insta-item')
              .append($cap.fadeIn());
-      $('body').highlight(/\B#\w+/);
+      $('#feed-insta').highlight(/\B#\w+/);
     } else {
       $(this).removeClass('col-12 feed-insta-item');
       $(this).addClass('col-4 feed-insta-item');
       $('.feed-insta-item').delay(500).fadeIn(600);
       $(this).remove($cap.hide());
-      $('body').highlight(/\B#\w+/);
+      $('#feed-insta').highlight(/\B#\w+/);
     }
   })
 }

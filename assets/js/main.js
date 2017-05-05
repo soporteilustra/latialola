@@ -4,7 +4,10 @@ $('#call-action').click(function() {
   $('#main').fadeIn("slow").delay(500).addClass('showed');
   $('#landscape').addClass('hidden');
 });
-
+//redirect to index
+$('#img-brand').click(function() {
+  window.open('http://localhost:8000/','_self');
+});
 //maps
 function initMap() {
   var uluru = {lat: -12.1425579, lng: -77.0266613};
@@ -115,3 +118,13 @@ function resetForm() {
   $('.form-group').removeClass('has-success');
   $('.form-group').removeClass('has-warning');
 }
+
+
+//view high gallery
+$('.gallery-item').click(function () {
+  if ($(this).hasClass('col-md-4')) {
+    $(this).removeClass('col-md-4').addClass('col-md-12');
+  } else {
+    $(this).removeClass('col-md-12').addClass('col-md-4');
+  }
+});

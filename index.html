@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/normalize.css">
 </head>
-<body>
+<body class="ov">
   <section id="landscape">
     <img class="bg-land hidden-md-up" src="assets/media/bgland2.jpg" alt="">
     <iframe class="bg-land hidden-sm-down embed-responsive embed-responsive-4by3" width="640" height="360" src="https://www.youtube.com/embed/SO7lR4QQ4eo?ecver=2&rel=0&showinfo=0&autoplay=1&controls=0&loop=1&playlist=SO7lR4QQ4eo" frameborder="0" allowfullscreen></iframe>
@@ -42,41 +42,35 @@
         <div class="row justify-content-center">
           <div class="col-12 text-center">
             <div class="brand-head">
-              <img src="assets/media/logo_qincha.png" class="img-fluid" alt="">
+              <img id="img-brand" src="assets/media/logo_qincha.png" class="img-fluid" alt="">
             </div>
           </div>
           <div class="col-12 hidden-lg-up p-3 text-center">
             <button type="button" data-toggle="collapse" data-target="#toggleMenu" aria-controls="toggleMenu" aria-expanded="false" aria-label="Toggle navigation" class="btn btn-outline-qincha" id="btn-toggleMenu" name="button"><i class="fa fa-bars mr-1"></i>Menú</button>
           </div>
-          <nav class="col-12 mt-4 hidden-md-down">
+          <nav class="col-12 mt-4 hidden-md-down menu-qincha">
             <ul class="nav justify-content-center">
               <li class="nav-item">
-                <a class="nav-link active" href="#">INICIO</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">RESERVAS</a>
+                <a class="nav-link" href="https://www.mesa247.pe/lima/restaurante/qincha" target="_blank">RESERVAS</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">CARTA</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">FOTOS</a>
+                <a class="nav-link" href="http://localhost:8000/fotos">FOTOS</a>
               </li>
             </ul>
           </nav>
           <div class="collapse navbar-collapse" id="toggleMenu">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 text-md-center">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">INICIO</a>
-              </li>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 text-left">
               <li class="nav-item">
-                <a class="nav-link" href="#">RESERVAS</a>
+                <a class="nav-link" href="https://www.mesa247.pe/lima/restaurante/qincha" target="_blank">RESERVAS</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">CARTA</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">FOTOS</a>
+                <a class="nav-link" href="http://localhost:8000/fotos">FOTOS</a>
               </li>
             </ul>
           </div>
@@ -88,14 +82,10 @@
       <div class="container p-3">
         <div class="row">
           <div class="col-12">
-            <p class="textual text-center text-uppercase">
-              <b>
-                Qincha nace de la relación entre la tierra y el mar, entre nuestra cocteleria y gastronomía, entre la cultura y el Arte!
-              </b>
-            </p>
             <p class="textual text-center lead">
-              Nuestro templo es un espacio que te transporta al Perú, degustando nuestros sabores podrás viajar a los lugares más espectaculares de la Costa, Sierra y Selva.
-              <span class="text-qincha text-info">#BarFrenteAlMar.</span>
+                Qincha nace de la relación entre la tierra y el mar, entre nuestra cocteleria y gastronomía, entre la cultura y el Arte!
+                <br>
+                Nuestro templo es un espacio que te transporta al Perú, degustando nuestros sabores podrás viajar a los lugares más espectaculares de la Costa, Sierra y Selva.
             </p>
           </div>
         </div>
@@ -174,6 +164,16 @@
         </a>
         <div class="zocalo"></div>
       </div>
+
+      <section id="hashtag">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center">
+              <h1 class="text-higher m-0">#BarFrenteAlMar</h1>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <footer>
         <div class="container">
@@ -256,10 +256,6 @@
       </footer>
 
     </section>
-
-  </section>
-
-  <section class="result">
 
   </section>
 
