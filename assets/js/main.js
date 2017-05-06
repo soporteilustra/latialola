@@ -123,6 +123,7 @@ function resetForm() {
 //view high gallery
 $('.gallery-item').click(function () {
   if ($(this).hasClass('col-md-4')) {
+    $('.gallery-item').removeClass('col-md-12');
     $(this).removeClass('col-md-4').addClass('col-md-12');
   } else {
     $(this).removeClass('col-md-12').addClass('col-md-4');
