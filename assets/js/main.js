@@ -6,7 +6,7 @@ $('#call-action').click(function() {
 });
 //redirect to index
 $('#img-brand').click(function() {
-  window.open('http://localhost:8000/','_self');
+  window.open('./','_self');
 });
 //maps
 function initMap() {
