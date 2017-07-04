@@ -13,38 +13,43 @@ $(document).ready(function () {
   }
 
   today = mm+'/'+dd+'/'+yyyy;
-  $('#current-date').html('Reporte al '+today);
+  $('#current-date').html(today);
+  $('#time').html(today);
 });
 
 const msgLogForm = '<div id="msgLogStatus" class="form-control-feedback">:msg:</div>';
 
 /***** Formulario de suscripcion ***/
-$('#form').submit(function (e) {
+$('#accessform').submit(function (e) {
   e.preventDefault();
-
+  $('#accessform').hide(200);
+  $('#process-access').show(200);
   $.ajax({
     method: 'POST',
     url: $(this).attr('action'),
     data: $(this).serialize(),
     success: function (msg) {
       resetForm();
-      $('#inputuser').focus();
-      if (msg == "pass_danger") {
-        var mensaje = "Contraseña errónea, inténtelo nuevamente!";
-        $('.form-group').addClass('has-danger');
-        $('input').addClass('form-control-danger');
-      } else if (msg == "user_danger") {
-        var mensaje = "Usuario administrador no existe!";
-        $('.form-group').addClass('has-danger');
-        $('input').addClass('form-control-danger');
-      } else {
-        var mensaje = "Su descarga ha comenzado satisfactoriamente!";
-        $('.form-group').addClass('has-success');
-        $('input').addClass('form-control-success');
-      }
-      var msje = msgLogForm.replace(':msg:', mensaje);
-      var $msje = $(msje);
-      $('#msjeLog').append($msje);
+      setTimeout(function(){
+         $('#inputuser').focus();
+         if (msg == "pass") {
+            $('#accessform').show();
+            $('#process-access').hide(100);
+            var mensaje = "Contraseña errónea, inténtelo nuevamente!";
+            $('.form-group').addClass('has-danger');
+            $('input').addClass('form-control-danger');
+         } else if (msg == "user") {
+            $('#accessform').show();
+            $('#process-access').hide(100);
+            var mensaje = "Usuario administrador no existe!";
+            $('.form-group').addClass('has-danger');
+            $('input').addClass('form-control-danger');
+         } else {
+            $('#process-access').hide(100);
+            $('#success-access').show(500);
+         }
+         $('#msg-access').html(mensaje);
+      }, 3000);
     }
   })
 

@@ -129,3 +129,45 @@ $('.gallery-item').click(function () {
     $(this).removeClass('col-md-12').addClass('col-md-4');
   }
 });
+
+/***** Formulario de reservas ***/
+$('#reservaform').submit(function (e) {
+  e.preventDefault();
+
+  var $formInput = $(this).find('input');
+  var cont = 0;
+
+  $formInput.each(function () {
+    if ( $.trim( $(this).val() ) == '' && $(this).attr('required')) {
+      console.log(cont);
+    } else {
+      cont++;
+      console.log(cont);
+    }
+  });
+
+  if (cont==8) {
+     $('#personal-data').hide();
+     $('#reservation-data').hide();
+     $('#btn-submit').hide();
+     $('#process-msg').show(500);
+     $.ajax({
+        method: 'POST',
+        url: $(this).attr('action'),
+        data: $(this).serialize(),
+        success: function (msg) {
+          setTimeout(function(){
+             $('#process-msg').hide(500);
+             if (msg == "success") {
+                $('#success-msg').show(500);
+             } else  {
+                $('#error-msg').show(500);
+             }
+          }, 2000);
+       }
+    })
+  } else {
+     alert('Ingrese correctamente los datos.');
+  }
+
+});

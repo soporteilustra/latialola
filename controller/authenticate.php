@@ -15,8 +15,8 @@ if (userExists($user,$table, $conexion)) {
 } else {
     $band = 'user';
 }
-$_SESSION['result'] = $band;
-header('Location: http://localhost:8000/suscripciones/');
+
+echo $band;
 
 function userExists($user, $table,$conexion)
 {

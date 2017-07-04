@@ -252,6 +252,7 @@ nav.menu-qincha .nav .nav-item .nav-link.active {
 .input-qincha {
   border-radius: 0px;
   border-color: #212121;
+  font-family: 'Qincha', sans-serif;
   border-width: 2px;
 }
 .input-qincha::-webkit-input-placeholder {
@@ -259,6 +260,7 @@ nav.menu-qincha .nav .nav-item .nav-link.active {
   font-weight: lighter;
   font-family: 'Qincha', sans-serif;
   letter-spacing: 4px;
+  color: rgba(0, 0, 0, 0.35);
 }
 .social-links {
   text-align: justify;
@@ -408,6 +410,9 @@ footer {
   font-family: 'Qincha', sans-serif;
   font-weight: lighter;
   font-size: .9em;
+}
+h4.qincha-text {
+   font-size: 1.3em;
 }
 /*** Hash tags **/
 .highlight {
@@ -577,4 +582,22 @@ header {
     height: 10px;
     left: 0;
   }
+}
+
+#process-msg, #success-msg, #error-msg, #process-access, #success-access {
+   display: none;
+}
+#reservaform {
+   transition: all .2s ease-in;
+   -o-transition: all .2s ease-in;
+   -ms-transition: all .2s ease-in;
+   -moz-transition: all .2s ease-in;
+   -webkit-transition: all .2s ease-in;
+}
+#access-content {
+   transition: all .2s ease-in;
+   -o-transition: all .2s ease-in;
+   -ms-transition: all .2s ease-in;
+   -moz-transition: all .2s ease-in;
+   -webkit-transition: all .2s ease-in;
 }
