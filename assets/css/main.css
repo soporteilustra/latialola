@@ -1,20 +1,7 @@
 /*********** FONTS *****************/
 /* Google font */
-@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Lato:300');
-/* Own fonts */
-@font-face {
-  font-family: 'Qincha';
-  src: url(../fonts/neucha.otf);
-  font-weight: 200;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Qincha Sub';
-  src: url(../fonts/huamanpoma.ttf);
-  font-weight: 400;
-  font-style: normal;
-}
 /************************************/
 
 /******** Views transition **********/
@@ -22,19 +9,24 @@ body.ov {
   overflow: hidden;
 }
 #landscape {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 9;
-  padding: 0;
-  margin: 0;
-  transition: all 0.7s ease-out;
-  -webkit-transition: all 0.7s ease-out;
-  -moz-transition: all 0.7s ease-out;
-  -ms-transition: all 0.7s ease-out;
-  -o-transition: all 0.7s ease-out;
+     background-image: url(../media/cover.png), url(../media/logocover.png);
+     background-blend-mode: multiply;
+     background-position: center center;
+     background-repeat: repeat;
+     background-size: contain;
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100vh;
+       z-index: 9;
+       padding: 0;
+       margin: 0;
+       transition: all 0.7s ease-out;
+       -webkit-transition: all 0.7s ease-out;
+       -moz-transition: all 0.7s ease-out;
+       -ms-transition: all 0.7s ease-out;
+       -o-transition: all 0.7s ease-out;
 }
 #main {
   position: absolute;
@@ -63,54 +55,23 @@ body.ov {
 #img-brand {
   cursor: pointer;
 }
-#landscape .bg-land {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+#landscape .btn-welcome {
+     margin-bottom: 20%;
 }
-#landscape .filter-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.5);
-}
-#landscape .call-action .btn-call {
-  background: transparent;
-  padding: 0.4em 4em;
-  color: #fff;
-  font-family: 'Qincha', sans-serif;
-  font-size: 1.6em;
-  text-transform: uppercase;
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  letter-spacing: 5px;
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
-}
-#landscape .call-action .btn-call::after, #landscape .call-action .btn-call::before {
-  content: '---------------------------';
-  width: 100%;
-  position: absolute;
-  left: 0;
-  color: #eb5c28;
-  text-align: center;
-}
-#landscape .call-action .btn-call::before {
-  top: -15px;
-}
-#landscape .call-action .btn-call::after {
-  bottom: -20px;
-}
-#landscape .call-action .btn-call img {
-  width: 35px;
-  height: auto;
-  margin-right: .8em;
-  display: inline-block;
+#call-action {
+     background-image: url(../media/btn.png);
+     background-position: center center;
+     background-size: contain;
+     background-repeat: no-repeat;
+     position: relative;
+     color: #fff;
+     padding: 1em 2em;
+     font-size: 1.24em;
+     font-family: 'Merriweather', serif;
+     font-weight: 100;
+     letter-spacing: 1px;
+     text-transform: uppercase;
+     cursor: pointer;
 }
 #main header {
   padding: 2em;
@@ -128,7 +89,7 @@ nav.menu-qincha .nav::before, nav.menu-qincha .nav::after {
   background-repeat: repeat;
   background-position: left;
   background-size: cover;
-  font-family: 'Qincha', sans-serif;
+  font-family: 'Merriweather', sans-serif;
   font-weight: bold;
   letter-spacing: 6px;
   width: 60%;
@@ -148,17 +109,20 @@ nav.menu-qincha .nav .nav-item {
   padding: 0.5em 1em;
 }
 nav.menu-qincha .nav .nav-item .nav-link {
-  color: #424242;
-  font-family: 'Qincha', serif;
+  color: #828385;
+  font-family: 'Merriweather', serif;
   font-weight: 400;
   letter-spacing: 2px;
-  font-size: 1.3em;
+  font-size: 1.2em;
+  border-bottom: 3px solid #b18862;
 }
 nav.menu-qincha .nav .nav-item .nav-link:hover {
-  color: #eb5c28;
+  color: #b18862;
 }
 nav.menu-qincha .nav .nav-item .nav-link.active {
-  color: #c1282f;
+  color: #fff;
+  border-radius: 10px;
+  background: #b18862;
 }
 .textual {
   font-family: 'Droid Serif', serif;
@@ -172,7 +136,7 @@ nav.menu-qincha .nav .nav-item .nav-link.active {
   font-weight: bold;
 }
 .text-qincha {
-  font-family: 'Qincha', monospace;
+  font-family: 'Merriweather', monospace;
   font-size: 1.2em;
 }
 #img-rombo {
@@ -195,23 +159,12 @@ nav.menu-qincha .nav .nav-item .nav-link.active {
   background-size: cover;
 }
 .title {
-  font-family: 'Qincha', sans-serif;
+  font-family: 'Merriweather', sans-serif;
   font-weight: 400;
   display: inline-block;
   width: auto;
   text-transform: uppercase;
   margin-bottom: 1.5em;
-  position: relative;
-}
-.title::after {
-  content: '_';
-  position: absolute;
-  bottom: -20px;
-  right: 0;
-  font-size: 2em;
-  font-weight: lighter;
-  width: 100%;
-  text-align: right;
 }
 .media-grid {
   width: 100%;
@@ -236,29 +189,29 @@ nav.menu-qincha .nav .nav-item .nav-link.active {
 }
 .btn-outline-qincha {
   border-radius: 0px;
-  font-family: 'Qincha', sans-serif;
+  font-family: 'Merriweather', sans-serif;
   font-size: 1em;
   letter-spacing: 3px;
   border-width: 2px;
-  border-color: #c1282f;
-  color: #c1282f;
+  border-color: #b18862;
+  color: #b18862;
   background: #fff;
   cursor: pointer;
 }
 .btn-outline-qincha:hover {
-  background: #c1282f;
+  background: #b18862;
   color: #fff;
 }
 .input-qincha {
   border-radius: 0px;
   border-color: #212121;
-  font-family: 'Qincha', sans-serif;
+  font-family: 'Merriweather', sans-serif;
   border-width: 2px;
 }
 .input-qincha::-webkit-input-placeholder {
   font-size: .9em;
   font-weight: lighter;
-  font-family: 'Qincha', sans-serif;
+  font-family: 'Merriweather', sans-serif;
   letter-spacing: 4px;
   color: rgba(0, 0, 0, 0.35);
 }
@@ -307,7 +260,7 @@ nav.menu-qincha .nav .nav-item .nav-link.active {
 }
 #toggleMenu ul li a {
   color: #424242;
-  font-family: 'Qincha', monospace;
+  font-family: 'Merriweather', monospace;
   font-size: 1.3em;
   letter-spacing: 2px;
 }
@@ -319,7 +272,7 @@ nav.menu-qincha .nav .nav-item .nav-link.active {
   background-size: cover;
   width: 50%;
   height: 10px;
-  font-family: 'Qincha', sans-serif;
+  font-family: 'Merriweather', sans-serif;
   font-weight: bold;
   letter-spacing: 6px;
   text-align: left;
@@ -391,7 +344,7 @@ footer {
 }
 .follow a {
   color: #424242;
-  font-family: 'Qincha', sans-serif;
+  font-family: 'Merriweather', sans-serif;
   letter-spacing: 1px;
 }
 .bg-insta {
@@ -407,7 +360,7 @@ footer {
   font-size: .9em;
 }
 .qincha-text {
-  font-family: 'Qincha', sans-serif;
+  font-family: 'Merriweather', sans-serif;
   font-weight: lighter;
   font-size: .9em;
 }
@@ -426,7 +379,7 @@ h4.qincha-text {
   background: #000;
 }
 #card-log .card-header {
-  font-family: 'Qincha', sans-serif;
+  font-family: 'Merriweather', sans-serif;
   font-size: 1.4em;
   letter-spacing: 1px;
 }
@@ -474,7 +427,7 @@ header {
   font-size: 1.1em;
 }
 #hashtag h1 {
-  font-family: 'Qincha Sub';
+  font-family: 'Roboto Slab';
   text-transform: uppercase;
   opacity: 0.3;
   filter: blur(.019em) grayscale(90%);

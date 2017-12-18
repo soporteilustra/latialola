@@ -10,7 +10,7 @@ $('#img-brand').click(function() {
 });
 //maps
 function initMap() {
-  var uluru = {lat: -12.1425579, lng: -77.0266613};
+  var uluru = {lat: -14.0794951, lng: -75.7235735};
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 15,
     center: uluru,
@@ -145,8 +145,13 @@ $('#reservaform').submit(function (e) {
       console.log(cont);
     }
   });
-
-  if (cont==8) {
+  var $fechaReserva = $('input[name="fecha"]').val();
+  console.log($fechaReserva);
+  var reservaDate = convertDateFormat($fechaReserva);
+  console.log(reservaDate)
+  if(checkDate(reservaDate)) {
+      alert('Reservas no disponibles para el '+ reservaDate+' por evento privado');
+  } else if (cont==8) {
      $('#personal-data').hide();
      $('#reservation-data').hide();
      $('#btn-submit').hide();
@@ -171,3 +176,37 @@ $('#reservaform').submit(function (e) {
   }
 
 });
+
+//Check date between
+
+function checkDate(date) {
+	var bolean = false;
+    var dateFrom = "28/07/2017";
+    var dateTo = "29/07/2017";
+    var dateCheck = date;
+
+    var d1 = dateFrom.split("/");
+    var d2 = dateTo.split("/");
+    var c = dateCheck.split("/");
+
+    var from = new Date(d1[2], parseInt(d1[1])-1, d1[0]);  // -1 because months are from 0 to 11
+    var to   = new Date(d2[2], parseInt(d2[1])-1, d2[0]);
+    var check = new Date(c[2], parseInt(c[1])-1, c[0]);
+
+    if(check >= from && check <= to) {
+		bolean = true;
+	}
+     var days = ['Domingo','Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
+     var d = new Date(check);
+     var dayName = days[d.getDay()];
+     console.log(dayName);
+     if (dayName == 'Lunes') {
+          bolean = true;
+     }
+	return bolean;
+}
+
+function convertDateFormat(string) {
+  var info = string.split('-');
+  return info[2] + '/' + info[1] + '/' + info[0];
+}
