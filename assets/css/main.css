@@ -437,9 +437,6 @@ header {
   #img-brand {
     width: 80%;
   }
-  #call-action::before, #call-action::after {
-    content: '-------------------------' !important;
-  }
   #main header {
     padding-bottom: .5em !important;
   }
@@ -492,14 +489,6 @@ header {
   }
   #call-action {
     font-size: .8em !important;
-  }
-  #call-action::before, #call-action::after {
-    content: '--------------------------' !important;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    color: #eb5c28;
-    text-align: center;
   }
   #img-brand {
     width: 80%;
@@ -567,4 +556,14 @@ header {
 }
 .mnry > img {
      margin-bottom: 2px;
+}
+
+@media (max-width: 425px) {
+     #landscape {
+          background-repeat: no-repeat;
+          background-size: cover;
+     }
+     #call-action {
+          font-size: .9em;
+     }
 }
