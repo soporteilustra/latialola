@@ -5,6 +5,11 @@
 /************************************/
 
 /******** Views transition **********/
+body{
+     background-image: url(../media/textura.jpg);
+     background-repeat: repeat;
+     background-position: center;
+}
 body.ov {
   overflow: hidden;
 }
@@ -35,7 +40,9 @@ body.ov {
   z-index: 8;
   width: 100%;
   height: auto;
-  background: white;
+  background-image: url(../media/textura.jpg);
+  background-repeat: repeat;
+  background-position: center;
   transition: all 0.7s ease-out;
   -webkit-transition: all 0.7s ease-out;
   -moz-transition: all 0.7s ease-out;
