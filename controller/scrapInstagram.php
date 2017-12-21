@@ -27,6 +27,6 @@ function crawl_page($url, $depth = 5)
 
     return $feedmedia;
 }
-$result = crawl_page("https://www.instagram.com/qincha.bar/", 2);
+$result = crawl_page("https://www.instagram.com/latialolaperu/", 2);
 echo json_encode($result);
 ?>
